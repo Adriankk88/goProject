@@ -58,7 +58,6 @@ func writeToFile(n int) {
 					fmt.Printf("WriteDataToTxt panic: %v,stack: %s\n", e, debug.Stack())
 					// return
 				}
-
 				wg.Done()
 				<-limitChan
 			}()
