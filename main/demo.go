@@ -73,7 +73,6 @@ func writeToFile(n int) {
 			// 要加锁/解锁，否则 bufWriter.WriteString 写入数据有问题
 			mutex.Lock()
 			_, err := bufWriter.WriteString(emailStr)
-			//_, err := bufWriter.WriteString(strId + strName + strScore + "\n")
 			if err != nil {
 				fmt.Printf("WriteDataToTxt WriteString err: %v\n", err)
 				return
